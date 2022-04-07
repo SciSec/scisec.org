@@ -204,6 +204,9 @@ body {
 	text-align:justify;
 
 }
+.Lectures table {
+	min-height:2000px;
+}
 
 .Lectures td{
 	font: 1.3em "Roboto Condensed", Arial, Helvetica, sans-serif;
@@ -211,6 +214,9 @@ body {
 	color:#555;
 	padding:10px;
 	text-align:justify;
+	img {
+		margin:0 auto;
+	}
 
 }
 
