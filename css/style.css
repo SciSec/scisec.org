@@ -207,7 +207,7 @@ body {
 .Lectures table {
 	min-height:2000px;
 }
-.Lectures td img {
+.Lectures img {
 	dispaly: block;	
 	margin: 10px auto;
 	}
