@@ -188,7 +188,7 @@ body {
 	color:#A0A0A4;
 }
 
-#XSJP, #GTP, #DUP,#MYP{
+#XSJP, #GTP, #DUP,#MYP, #DYP{
 	font: 1.3em "Roboto Condensed", Arial, Helvetica, sans-serif;
 	line-height:20px;
 	color:#555;
@@ -196,7 +196,7 @@ body {
 	text-align: center
 }
 
-#XSJ, #GT,#DU,#MY{
+#XSJ, #GT,#DU,#MY,#DY{
 	font: 1.3em "Roboto Condensed", Arial, Helvetica, sans-serif;
 	line-height:20px;
 	color:#555;
