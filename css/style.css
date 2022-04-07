@@ -208,7 +208,8 @@ body {
 	min-height:2000px;
 }
 .Lectures td img {
-		margin:0 auto;
+	dispaly: block;	
+	margin: 10px auto;
 	}
 
 .Lectures td{
