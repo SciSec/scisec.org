@@ -217,9 +217,10 @@ body {
 	line-height:20px;
 	color:#555;
 	padding:10px;
+	text-align:center;
+}
+.Lectures td:last-of-type{
 	text-align:justify;
-	
-
 }
 
 .main .tab1 .tab1td1{
