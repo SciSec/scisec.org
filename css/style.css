@@ -207,9 +207,8 @@ body {
 .Lectures table {
 	min-height:2000px;
 }
-.Lectures img {
-	dispaly: block;	
-	margin: 10px auto;
+.Lectures .tgc {
+	text-align: center
 	}
 
 .Lectures td{
@@ -217,9 +216,6 @@ body {
 	line-height:20px;
 	color:#555;
 	padding:10px;
-	text-align:center;
-}
-.Lectures td:last-of-type{
 	text-align:justify;
 }
 
