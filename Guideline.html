@@ -5,45 +5,52 @@
   <title>Guideline - SciSec 2025</title>
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <style>
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
       font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
     }
-    h1 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 20px;
-    }
+
     .pdf-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 40px;
+      width: 100vw;
+      height: 90vh;
     }
+
     .pdf-container iframe {
       width: 100%;
-      height: 1000px;
-      border: 1px solid #ccc;
+      height: 100%;
+      border: none;
     }
+
     .download-links {
+      height: 10vh;
+      overflow-y: auto;
+      padding: 10px 20px;
+      background-color: #f0f0f0;
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
+
     .download-links a {
-      margin: 8px 0;
       text-decoration: none;
       color: #0066cc;
-      font-size: 16px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      padding: 6px 12px;
+      border-radius: 4px;
+      background-color: white;
     }
+
     .download-links a:hover {
-      text-decoration: underline;
+      background-color: #e0e0e0;
     }
   </style>
 </head>
 <body>
-
-  <h1>SciSec 2025 Camera-Ready Submission Guidelines</h1>
 
   <div class="pdf-container">
     <iframe src="camera-ready/camera-ready.pdf"></iframe>
@@ -51,22 +58,22 @@
 
   <div class="download-links">
     <a href="camera-ready/8747_Liu_%20SciSec%202025_LNCS%20acceptance_note.pdf" download>
-      8747_Liu_ SciSec 2025_LNCS acceptance_note.pdf
+      8747_Liu_ SciSec 2025_LNCS acceptance_note
     </a>
     <a href="camera-ready/Editor%20guidelines%20for%20Springer%20computer%20science%20proceedings" download>
-      Editor guidelines for Springer computer science proceedings
+      Editor guidelines
     </a>
     <a href="camera-ready/Author%20guidelines%20for%20Springer%20computer%20science%20proceedings" download>
-      Author guidelines for Springer computer science proceedings
+      Author guidelines
     </a>
     <a href="camera-ready/frontmatter_sample.pdf" download>
-      frontmatter_sample.pdf
+      Frontmatter sample
     </a>
     <a href="camera-ready/SNCS_ProceedingsPaper_LTP_ST_SN%20Singapore.docx" download>
-      SNCS_ProceedingsPaper_LTP_ST_SN Singapore.docx
+      Proceedings Paper Template
     </a>
     <a href="camera-ready/LNCS_Conf_Terms.pdf" download>
-      LNCS_Conf_Terms.pdf
+      LNCS Conf Terms
     </a>
   </div>
 
