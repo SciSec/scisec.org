@@ -5,49 +5,59 @@
   <title>Guideline - SciSec 2025</title>
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-  }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
 
-  .pdf-container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto 40px auto;
-  }
+    h1 {
+      text-align: center;
+      padding: 20px 0;
+      color: #333;
+    }
 
-  .pdf-container iframe {
-    width: 100%;
-    height: 1000px; /* 可改为 90vh 试试 */
-    border: none;
-  }
+    .pdf-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
 
-  .download-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 40px;
-  }
+    .pdf-container iframe {
+      width: 100%;
+      height: 90vh;
+      border: 1px solid #ccc;
+    }
 
-  .download-links a {
-    margin: 8px 0;
-    text-decoration: none;
-    color: #0066cc;
-    font-size: 16px;
-  }
+    .download-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 60px;
+    }
 
-  .download-links a:hover {
-    text-decoration: underline;
-  }
-</style>
+    .download-links a {
+      margin: 8px 0;
+      text-decoration: none;
+      color: #0066cc;
+      font-size: 16px;
+      word-break: break-word;
+      text-align: center;
+      max-width: 90%;
+    }
 
+    .download-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
+  <h1>SciSec 2025 Camera-Ready Submission Guidelines</h1>
+
   <div class="pdf-container">
-    <iframe src="camera-ready.pdf"></iframe>
+    <iframe src="camera-ready/camera-ready.pdf"></iframe>
   </div>
 
   <div class="download-links">
