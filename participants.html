@@ -15,9 +15,11 @@
   max-width: 1200px; /* 限制容器宽度，避免太宽 */
 }
 
-/* 单个嘉宾卡片：统一精简样式 */
+/* 单个嘉宾卡片：统一精简样式 + 垂直弹性布局 */
 .keynote-card {
-  display: block;
+  display: flex;
+  flex-direction: column; /* 垂直排列：图片在上，文字在下 */
+  align-items: center;    /* 水平居中 */
   text-align: center;
   width: 23%; /* 适配缩小后的照片 */
   margin-bottom: 20px;
@@ -58,72 +60,72 @@
       <div class="keynotes-container">
         <!-- 1. Prof.Fenghua Li -->
         <a href="https://people.ucas.edu.cn/~0017958" target="_blank" class="keynote-card">
+          <img src="img/lfh.jpg" alt="Prof.Fenghua Li">
           <p><strong>Prof.Fenghua Li</strong></p>
           <p>Institute of Information Engineering, Chinese Academy of Sciences</p>
-          <img src="img/lfh.jpg" alt="Prof.Fenghua Li">
         </a>
 
         <!-- 2. Prof.Xiaosong Zhang -->
         <a href="https://faculty.uestc.edu.cn/zhangxiaosong/zh_CN/index.htm" target="_blank" class="keynote-card">
+          <img src="img/zxs.jpg" alt="Prof.Xiaosong Zhang">
           <p><strong>Prof.Xiaosong Zhang</strong></p>
           <p>University of Electronic Science and Technology of China</p>
-          <img src="img/zxs.jpg" alt="Prof.Xiaosong Zhang">
         </a>
 
         <!-- 3. Prof.Debiao He -->
         <a href="https://jszy.whu.edu.cn/hedebiao/zh_CN/index.htm" target="_blank" class="keynote-card">
+          <img src="img/hdb.png" alt="Prof.Debiao He">
           <p><strong>Prof.Debiao He</strong></p>
           <p>Wuhan University</p>
-          <img src="img/hdb.png" alt="Prof.Debiao He">
         </a>
 
         <!-- 4. Prof.Deqing Zou -->
         <a href="http://faculty.hust.edu.cn/zoudeqing/zh_CN/index.htm" target="_blank" class="keynote-card">
+          <img src="img/zdq.jpg" alt="Prof.Deqing Zou">
           <p><strong>Prof.Deqing Zou</strong></p>
           <p>Huazhong University of Science and Technology</p>
-          <img src="img/zdq.jpg" alt="Prof.Deqing Zou">
         </a>
 
         <!-- 5. Prof.Hongbin Luo -->
         <a href="https://cst.buaa.edu.cn/info/1111/3785.htm" target="_blank" class="keynote-card">
+          <img src="img/lhb.jpg" alt="Prof.Hongbin Luo">
           <p><strong>Prof.Hongbin Luo</strong></p>
           <p>Beihang University</p>
-          <img src="img/lhb.jpg" alt="Prof.Hongbin Luo">
         </a>
 
         <!-- 6. Prof.Tianqing Zhu -->
         <a href="javascript:;" target="_blank" class="keynote-card">
+          <img src="img/ztq.png" alt="Prof.Tianqing Zhu">
           <p><strong>Prof.Tianqing Zhu</strong></p>
           <p>City University of Macau</p>
-          <img src="img/ztq.png" alt="Prof.Tianqing Zhu">
         </a>
 
         <!-- 7. Prof.Xinyi Huang -->
         <a href="javascript:;" target="_blank" class="keynote-card">
+          <img src="img/hxy.png" alt="Prof.Xinyi Huang">
           <p><strong>Prof.Xinyi Huang</strong></p>
           <p>College of Cyber Security, Jinan University</p>
-          <img src="img/hxy.png" alt="Prof.Xinyi Huang">
         </a>
 
         <!-- 8. Prof.Zhangjie Fu -->
         <a href="javascript:;" target="_blank" class="keynote-card">
+          <img src="img/fzj.png" alt="Prof.Zhangjie Fu">
           <p><strong>Prof.Zhangjie Fu</strong></p>
           <p>School of Cyber Science and Engineering, Nanjing University of Information Science</p>
-          <img src="img/fzj.png" alt="Prof.Zhangjie Fu">
         </a>
 
         <!-- 9. Prof.Jian Shen -->
         <a href="javascript:;" target="_blank" class="keynote-card">
+          <img src="img/sj.png" alt="Prof.Jian Shen">
           <p><strong>Prof.Jian Shen</strong></p>
           <p>School of Cyber science and Technology, Zhejiang Sci-Tech University</p>
-          <img src="img/sj.png" alt="Prof.Jian Shen">
         </a>
 
         <!-- 10. Prof.Youliang Tian -->
         <a href="javascript:;" target="_blank" class="keynote-card">
+          <img src="img/tyl.png" alt="Prof.Youliang Tian">
           <p><strong>Prof.Youliang Tian</strong></p>
           <p>Guizhou University</p>
-          <img src="img/tyl.png" alt="Prof.Youliang Tian">
         </a>
       </div>
     </div>
