@@ -4,95 +4,106 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>participants_SciSec2026</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<style>
+/* 核心布局样式：实现四人一排的弹性布局 */
+.keynotes-container {
+  display: flex;
+  flex-wrap: wrap; /* 自动换行 */
+  justify-content: flex-start;
+  gap: 20px; /* 卡片之间的间距 */
+  margin: 20px 0;
+}
+
+/* 单个嘉宾卡片样式：统一格式 */
+.keynote-card {
+  display: block;
+  text-align: center;
+  width: 22%; /* 四人一排，预留间距空间 */
+  margin-bottom: 30px;
+  text-decoration: none; /* 去掉链接下划线 */
+  color: inherit; /* 继承文字颜色，不显示链接蓝色 */
+}
+
+.keynote-card p {
+  margin: 5px 0;
+}
+
+.keynote-card img {
+  display: block;
+  margin: 10px auto;
+  width: 230px;
+  height: 280px;
+  object-fit: cover; /* 保持图片比例，避免拉伸 */
+}
+</style>
 </head>
 
 <body>
 <div class="page">
-    <div class="content">
-      <div class="main">
-       	  <h1>Keynotes</h1>
-		  
+  <div class="content">
+    <div class="main">
+      <h1>Keynotes</h1>
+      
+      <!-- 嘉宾容器：四人一排布局 -->
+      <div class="keynotes-container">
+        <!-- 1. Prof.Fenghua Li -->
+        <a href="https://people.ucas.edu.cn/~0017958" target="_blank" class="keynote-card">
+          <p><strong>Prof.Fenghua Li</strong></p>
+          <p>Institute of Information Engineering, Chinese Academy of Sciences</p>
+          <img src="img/lfh.jpg" alt="Prof.Fenghua Li">
+        </a>
 
-		   <a href="https://people.ucas.edu.cn/~0017958" target="_blank">
-          <p>
-            <strong>Prof.Fenghua Li</strong>
-          </p>
-          <img src="img/lfh.jpg" alt="" width="230" height="280"/>
-          <p>
-			 Li Fenghua is an esteemed professor at the Institute of Information Engineering, Chinese Academy of Sciences.
-          </p>  
-		   </a>
+        <!-- 2. Prof.Xiaosong Zhang -->
+        <a href="https://faculty.uestc.edu.cn/zhangxiaosong/zh_CN/index.htm" target="_blank" class="keynote-card">
+          <p><strong>Prof.Xiaosong Zhang</strong></p>
+          <p>University of Electronic Science and Technology of China</p>
+          <img src="img/zxs.jpg" alt="Prof.Xiaosong Zhang">
+        </a>
 
-		  <a href="https://faculty.uestc.edu.cn/zhangxiaosong/zh_CN/index.htm" target="_blank">
-          <p>
-            <strong>Prof.Xiaosong Zhang</strong>
-          </p>
-       
-			 <img src="img/zxs.jpg" alt="" width="230" height="280"/> 
-		  
-          <p>
-			Zhang Xiaosong is a professor and the Dean of the School of Information and Software Engineering (Demonstration Software School) as well as the School of Cyberspace Security at the University of Electronic Science and Technology of China.
-          </p>  
-		  </a>
-		  
+        <!-- 3. Prof.Debiao He -->
+        <a href="https://jszy.whu.edu.cn/hedebiao/zh_CN/index.htm" target="_blank" class="keynote-card">
+          <p><strong>Prof.Debiao He</strong></p>
+          <p>Wuhan University</p>
+          <img src="img/hdb.png" alt="Prof.Debiao He">
+        </a>
 
-<a href="https://jszy.whu.edu.cn/hedebiao/zh_CN/index.htm" target="_blank">
-		  <p>
-            <strong>Prof.Debiao He</strong>
-          </p>
-          <img src="img/hdb.png" alt="" width="230" height="280"/>
-          <p>
-			 He Debiao is a professor and the Dean of the School of Computer Science at Wuhan University.
-          </p>  
-	 </a>
+        <!-- 4. Prof.Deqing Zou -->
+        <a href="http://faculty.hust.edu.cn/zoudeqing/zh_CN/index.htm" target="_blank" class="keynote-card">
+          <p><strong>Prof.Deqing Zou</strong></p>
+          <p>Huazhong University of Science and Technology</p>
+          <img src="img/zdq.jpg" alt="Prof.Deqing Zou">
+        </a>
 
-     <a href="http://faculty.hust.edu.cn/zoudeqing/zh_CN/index.htm" target="_blank">
-		  <p>
-            <strong>Prof.Deqing Zou</strong>
-          </p>
-          <img src="img/zdq.jpg" alt="" width="230" height="280"/>
-          <p>
-		  Zou Deqing is a professor and the Executive Dean of the School of Cyberspace Security at Huazhong University of Science and Technology.
-          </p>
-	 </a>
+        <!-- 5. Prof.Hongbin Luo -->
+        <a href="https://cst.buaa.edu.cn/info/1111/3785.htm" target="_blank" class="keynote-card">
+          <p><strong>Prof.Hongbin Luo</strong></p>
+          <p>Beihang University</p>
+          <img src="img/lhb.jpg" alt="Prof.Hongbin Luo">
+        </a>
 
-		  <a href="https://cst.buaa.edu.cn/info/1111/3785.htm" target="_blank">
-		  <p>
-            <strong>Prof.Hongbin Luo</strong>
-          </p>
-          <img src="img/lhb.jpg" alt="" width="230" height="280"/>
-          <p>
-			 Luo Hongbin is a professor and the Dean of the School of Cybersecurity at Beihang University.
-          </p>  
-		  </a>
+        <!-- 6. Prof.Tianqing Zhu -->
+        <a href="javascript:;" target="_blank" class="keynote-card">
+          <p><strong>Prof.Tianqing Zhu</strong></p>
+          <p>City University of Macau</p>
+          <img src="img/ztq.png" alt="Prof.Tianqing Zhu">
+        </a>
 
+        <!-- 7. Prof.Zhangjie Fu -->
+        <a href="javascript:;" target="_blank" class="keynote-card">
+          <p><strong>Prof.Zhangjie Fu</strong></p>
+          <p>Nanjing University of Information Science</p>
+          <img src="img/fzj.png" alt="Prof.Zhangjie Fu">
+        </a>
 
-       
-<a style="display: block; text-align: center; margin-bottom: 30px;">
-    <p style="margin: 5px 0;"><strong>Tianqing Zhu Professor</strong></p>
-    <p style="margin: 5px 0;">City University of Macau</p>
-    <img src="img/ztq.png" alt="" width="230" height="280" style="display: block; margin: 10px auto;">
-</a>
-
-
-<a style="display: block; text-align: center; margin-bottom: 30px;">
-    <p style="margin: 5px 0;"><strong>Zhangjie Fu Professor</strong></p>
-    <p style="margin: 5px 0;">School of Cyber Science and Engineering, Nanjing University of Information Science</p>
-    <img src="img/fzj.png" alt="" width="230" height="280" style="display: block; margin: 10px auto;">
-</a>
-
-
-
-<a style="display: block; text-align: center; margin-bottom: 30px;">
-    <p style="margin: 5px 0;"><strong>Youliang Tian Professor</strong></p>
-    <p style="margin: 5px 0;">College of Big Data and Information Engineering, Guizhou University</p>
-    <img src="img/tyl.png" alt="" width="230" height="280" style="display: block; margin: 10px auto;">
-</a>
-
-		  
-          </p>	  
-        </div>
+        <!-- 8. Prof.Youliang Tian -->
+        <a href="javascript:;" target="_blank" class="keynote-card">
+          <p><strong>Prof.Youliang Tian</strong></p>
+          <p>Guizhou University</p>
+          <img src="img/tyl.png" alt="Prof.Youliang Tian">
+        </a>
+      </div>
     </div>
+  </div>
 </div>
 </body>
 </html>
