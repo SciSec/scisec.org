@@ -5,35 +5,46 @@
 <title>participants_SciSec2026</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <style>
-/* 核心布局样式：实现四人一排的弹性布局 */
+/* 核心布局：四人一排，紧凑间距 */
 .keynotes-container {
   display: flex;
-  flex-wrap: wrap; /* 自动换行 */
-  justify-content: flex-start;
-  gap: 20px; /* 卡片之间的间距 */
+  flex-wrap: wrap;
+  justify-content: space-between; /* 均匀分布 */
+  gap: 15px; /* 缩小卡片间距 */
   margin: 20px 0;
+  max-width: 1200px; /* 限制容器宽度，避免太宽 */
 }
 
-/* 单个嘉宾卡片样式：统一格式 */
+/* 单个嘉宾卡片：统一精简样式 */
 .keynote-card {
   display: block;
   text-align: center;
-  width: 22%; /* 四人一排，预留间距空间 */
-  margin-bottom: 30px;
-  text-decoration: none; /* 去掉链接下划线 */
-  color: inherit; /* 继承文字颜色，不显示链接蓝色 */
+  width: 23%; /* 适配缩小后的照片 */
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #333;
 }
 
+/* 文字大小分层：标题稍大，单位更小 */
+.keynote-card p strong {
+  font-size: 15px; /* 缩小姓名字体 */
+  display: block; /* 姓名单独占行 */
+  margin-bottom: 4px;
+}
 .keynote-card p {
-  margin: 5px 0;
+  font-size: 12px; /* 缩小单位字体 */
+  line-height: 1.4; /* 优化文字行高 */
+  margin: 0 0 8px 0;
 }
 
+/* 缩小照片尺寸，保持比例 */
 .keynote-card img {
   display: block;
-  margin: 10px auto;
-  width: 230px;
-  height: 280px;
-  object-fit: cover; /* 保持图片比例，避免拉伸 */
+  margin: 0 auto 5px;
+  width: 120px; /* 大幅缩小照片 */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px; /* 增加轻微圆角，更美观 */
 }
 </style>
 </head>
@@ -44,7 +55,6 @@
     <div class="main">
       <h1>Keynotes</h1>
       
-      <!-- 嘉宾容器：四人一排布局 -->
       <div class="keynotes-container">
         <!-- 1. Prof.Fenghua Li -->
         <a href="https://people.ucas.edu.cn/~0017958" target="_blank" class="keynote-card">
@@ -88,14 +98,28 @@
           <img src="img/ztq.png" alt="Prof.Tianqing Zhu">
         </a>
 
-        <!-- 7. Prof.Zhangjie Fu -->
+        <!-- 7. Prof.Xinyi Huang -->
+        <a href="javascript:;" target="_blank" class="keynote-card">
+          <p><strong>Prof.Xinyi Huang</strong></p>
+          <p>College of Cyber Security, Jinan University</p>
+          <img src="img/hxy.png" alt="Prof.Xinyi Huang">
+        </a>
+
+        <!-- 8. Prof.Zhangjie Fu -->
         <a href="javascript:;" target="_blank" class="keynote-card">
           <p><strong>Prof.Zhangjie Fu</strong></p>
-          <p>Nanjing University of Information Science</p>
+          <p>School of Cyber Science and Engineering, Nanjing University of Information Science</p>
           <img src="img/fzj.png" alt="Prof.Zhangjie Fu">
         </a>
 
-        <!-- 8. Prof.Youliang Tian -->
+        <!-- 9. Prof.Jian Shen -->
+        <a href="javascript:;" target="_blank" class="keynote-card">
+          <p><strong>Prof.Jian Shen</strong></p>
+          <p>School of Cyber science and Technology, Zhejiang Sci-Tech University</p>
+          <img src="img/sj.png" alt="Prof.Jian Shen">
+        </a>
+
+        <!-- 10. Prof.Youliang Tian -->
         <a href="javascript:;" target="_blank" class="keynote-card">
           <p><strong>Prof.Youliang Tian</strong></p>
           <p>Guizhou University</p>
