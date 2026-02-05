@@ -1,140 +1,123 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>participants_SciSec2026</title>
-<link href="css/style.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>Special Guests</title>
 <style>
-/* 核心布局：四人一排，紧凑间距，左对齐排列 */
-.keynotes-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; /* 改为左对齐，解决最后一行分散问题 */
-  gap: 20px; /* 统一间距，替代margin的分散效果 */
-  margin: 20px 0;
-  max-width: 1200px; /* 限制容器宽度，避免太宽 */
+/* 全局容器：4列网格，列宽均分 */
+.guests-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* 单个嘉宾卡片：统一高度+垂直弹性布局，确保文字底部对齐 */
-.keynote-card {
-  display: flex;
-  flex-direction: column; /* 垂直排列：图片在上，文字在下 */
-  align-items: center;    /* 水平居中 */
-  text-align: center;
-  width: calc(25% - 15px); /* 精准计算宽度，4个刚好一行，适配gap */
-  min-height: 280px; /* 统一卡片最小高度，解决文字高度不一致问题 */
-  margin-bottom: 20px;
-  text-decoration: none;
-  color: #333;
-  box-sizing: border-box; /* 确保宽度计算包含内边距/边框 */
+/* 单个嘉宾卡片：内部拆成3个固定区域（图片/名字/介绍），强制对齐顶部 */
+.guest-card {
+  display: grid;
+  /* 明确划分3行：图片行（固定高度）、名字行（固定高度）、介绍行（自动） */
+  grid-template-rows: 150px 40px auto;
+  gap: 10px; /* 区域之间的间距固定 */
 }
 
-/* 文字部分自动顶到卡片底部，实现对齐 */
-.keynote-card p {
-  margin-top: auto; /* 关键：让文字区域自动填充剩余空间，底部对齐 */
-  font-size: 12px; /* 统一单位字体大小 */
-  line-height: 1.4; /* 优化文字行高 */
-  margin-bottom: 8px;
-}
-
-/* 姓名字体分层，独占一行 */
-.keynote-card p strong {
-  font-size: 15px; /* 统一姓名字体 */
-  display: block; /* 姓名单独占行 */
-  margin-bottom: 4px;
-}
-
-/* 缩小照片尺寸，保持比例 */
-.keynote-card img {
-  display: block;
-  margin: 0 auto 10px;
-  width: 120px; /* 照片宽度 */
-  height: 150px; /* 照片高度 */
+/* 图片：占满图片行，尺寸统一 */
+.guest-card img {
+  width: 120px;
+  height: 100%; /* 撑满图片行的150px高度 */
   object-fit: cover;
-  border-radius: 4px; /* 轻微圆角 */
-  flex-shrink: 0; /* 防止图片被压缩变形 */
+  border-radius: 4px;
+}
+
+/* 名字：占满名字行，强制顶部对齐（不管名字长短） */
+.guest-card .name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  /* 名字在固定行内垂直居中，保证所有名字的“第一行”在同一水平线 */
+  display: flex;
+  align-items: center;
+}
+
+/* 介绍：占满介绍行，强制顶部对齐 */
+.guest-card .intro {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
 }
 </style>
 </head>
-
 <body>
-<div class="page">
-  <div class="content">
-    <div class="main">
-      <h1>Special Guests</h1>
-      
-      <div class="keynotes-container">
-        <!-- 1. Prof.Fenghua Li -->
-        <a href="https://people.ucas.edu.cn/~0017958" target="_blank" class="keynote-card">
-          <img src="img/lfh.jpg" alt="Prof.Fenghua Li">
-          <p><strong>Prof.Fenghua Li</strong></p>
-          <p>Li Fenghua is an esteemed professor at the Institute of Information Engineering, Chinese Academy of Sciences.</p>
-        </a>
+<h1>Special Guests</h1>
+<div class="guests-container">
+  <!-- 1. Prof.Fenghua Li -->
+  <div class="guest-card">
+    <img src="img/lfh.jpg" alt="Prof.Fenghua Li">
+    <div class="name">Prof.Fenghua Li</div>
+    <p class="intro">Li Fenghua is an esteemed professor at the Institute of Information Engineering, Chinese Academy of Sciences.</p>
+  </div>
 
-        <!-- 2. Prof.Xiaosong Zhang -->
-        <a href="https://faculty.uestc.edu.cn/zhangxiaosong/zh_CN/index.htm" target="_blank" class="keynote-card">
-          <img src="img/zxs.jpg" alt="Prof.Xiaosong Zhang">
-          <p><strong>Prof.Xiaosong Zhang</strong></p>
-          <p>Zhang Xiaosong is a professor and the Dean of the School of Information and Software Engineering (Demonstration Software School) as well as the School of Cyberspace Security at the University of Electronic Science and Technology of China.</p>
-        </a>
+  <!-- 2. Prof.Xiaosong Zhang -->
+  <div class="guest-card">
+    <img src="img/zxs.jpg" alt="Prof.Xiaosong Zhang">
+    <div class="name">Prof.Xiaosong Zhang</div>
+    <p class="intro">Zhang Xiaosong is a professor and the Dean of the School of Information and Software Engineering (Demonstration Software School) as well as the School of Cyberspace Security at the University of Electronic Science and Technology of China.</p>
+  </div>
 
-        <!-- 3. Prof.Debiao He -->
-        <a href="https://jszy.whu.edu.cn/hedebiao/zh_CN/index.htm" target="_blank" class="keynote-card">
-          <img src="img/hdb.png" alt="Prof.Debiao He">
-          <p><strong>Prof.Debiao He</strong></p>
-          <p>He Debiao is a professor and the Dean of the School of Computer Science at Wuhan University.</p>
-        </a>
+  <!-- 3. Prof.Debiao He -->
+  <div class="guest-card">
+    <img src="img/hdb.png" alt="Prof.Debiao He">
+    <div class="name">Prof.Debiao He</div>
+    <p class="intro">He Debiao is a professor and the Dean of the School of Computer Science at Wuhan University.</p>
+  </div>
 
-        <!-- 4. Prof.Deqing Zou -->
-        <a href="http://faculty.hust.edu.cn/zoudeqing/zh_CN/index.htm" target="_blank" class="keynote-card">
-          <img src="img/zdq.jpg" alt="Prof.Deqing Zou">
-          <p><strong>Prof.Deqing Zou</strong></p>
-          <p>Zou Deqing is a professor and the Executive Dean of the School of Cyberspace Security at Huazhong University of Science and Technology.</p>
-        </a>
+  <!-- 4. Prof.Deqing Zou -->
+  <div class="guest-card">
+    <img src="img/zdq.jpg" alt="Prof.Deqing Zou">
+    <div class="name">Prof.Deqing Zou</div>
+    <p class="intro">Zou Deqing is a professor and the Executive Dean of the School of Cyberspace Security at Huazhong University of Science and Technology.</p>
+  </div>
 
-        <!-- 5. Prof.Hongbin Luo -->
-        <a href="https://cst.buaa.edu.cn/info/1111/3785.htm" target="_blank" class="keynote-card">
-          <img src="img/lhb.jpg" alt="Prof.Hongbin Luo">
-          <p><strong>Prof.Hongbin Luo</strong></p>
-          <p>Luo Hongbin is a professor and the Dean of the School of Cybersecurity at Beihang University.</p>
-        </a>
+  <!-- 5. Prof.Hongbin Luo -->
+  <div class="guest-card">
+    <img src="img/lhb.jpg" alt="Prof.Hongbin Luo">
+    <div class="name">Prof.Hongbin Luo</div>
+    <p class="intro">Luo Hongbin is a professor and the Dean of the School of Cybersecurity at Beihang University.</p>
+  </div>
 
-        <!-- 6. Prof.Tianqing Zhu -->
-        <a href="javascript:;" target="_blank" class="keynote-card">
-          <img src="img/ztq.png" alt="Prof.Tianqing Zhu">
-          <p><strong>Prof.Tianqing Zhu</strong></p>
-          <p>Zhu Tianqing, a professor and doctoral supervisor, currently serves as the Vice Dean (Research) of the School of Data Science at the City University of Macau.</p>
-        </a>
+  <!-- 6. Prof.Tianqing Zhu -->
+  <div class="guest-card">
+    <img src="img/ztq.png" alt="Prof.Tianqing Zhu">
+    <div class="name">Prof.Tianqing Zhu</div>
+    <p class="intro">Zhu Tianqing, a professor and doctoral supervisor, currently serves as the Vice Dean (Research) of the School of Data Science at the City University of Macau.</p>
+  </div>
 
-        <!-- 7. Prof.Xinyi Huang -->
-        <a href="javascript:;" target="_blank" class="keynote-card">
-          <img src="img/hxy.png" alt="Prof.Xinyi Huang">
-          <p><strong>Prof.Xinyi Huang</strong></p>
-          <p>Huang Xinyi is a professor at the School of Cyberspace Security, Jinan University</p>
-        </a>
+  <!-- 7. Prof.Xinyi Huang -->
+  <div class="guest-card">
+    <img src="img/hxy.png" alt="Prof.Xinyi Huang">
+    <div class="name">Prof.Xinyi Huang</div>
+    <p class="intro">Huang Xinyi is a professor at the School of Cyberspace Security, Jinan University</p>
+  </div>
 
-        <!-- 8. Prof.Zhangjie Fu -->
-        <a href="javascript:;" target="_blank" class="keynote-card">
-          <img src="img/fzj.png" alt="Prof.Zhangjie Fu">
-          <p><strong>Prof.Zhangjie Fu</strong></p>
-          <p>Fu Zhangjie, Dean of the School of Computer Science and Engineering and the School of Cyberspace Security, Nanjing University of Information Science and Technology</p>
-        </a>
+  <!-- 8. Prof.Zhangjie Fu -->
+  <div class="guest-card">
+    <img src="img/fzj.png" alt="Prof.Zhangjie Fu">
+    <div class="name">Prof.Zhangjie Fu</div>
+    <p class="intro">Fu Zhangjie, Dean of the School of Computer Science and Engineering and the School of Cyberspace Security, Nanjing University of Information Science and Technology</p>
+  </div>
 
-        <!-- 9. Prof.Jian Shen -->
-        <a href="javascript:;" target="_blank" class="keynote-card">
-          <img src="img/sj.png" alt="Prof.Jian Shen">
-          <p><strong>Prof.Jian Shen</strong></p>
-          <p>Shen Jian, Dean of the School of Information Science and Engineering, Zhejiang Sci-Tech University</p>
-        </a>
+  <!-- 9. Prof.Jian Shen -->
+  <div class="guest-card">
+    <img src="img/sj.png" alt="Prof.Jian Shen">
+    <div class="name">Prof.Jian Shen</div>
+    <p class="intro">Shen Jian, Dean of the School of Information Science and Engineering, Zhejiang Sci-Tech University</p>
+  </div>
 
-        <!-- 10. Prof.Youliang Tian -->
-        <a href="javascript:;" target="_blank" class="keynote-card">
-          <img src="img/tyl.png" alt="Prof.Youliang Tian">
-          <p><strong>Prof.Youliang Tian</strong></p>
-          <p>Tian Youliang, Dean of the School of Big Data and Information Engineering, Guizhou University</p>
-        </a>
-      </div>
-    </div>
+  <!-- 10. Prof.Youliang Tian -->
+  <div class="guest-card">
+    <img src="img/tyl.png" alt="Prof.Youliang Tian">
+    <div class="name">Prof.Youliang Tian</div>
+    <p class="intro">Tian Youliang, Dean of the School of Big Data and Information Engineering, Guizhou University</p>
   </div>
 </div>
 </body>
