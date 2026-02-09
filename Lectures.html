@@ -3,122 +3,144 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>keynotes_SciSec2026</title>
-<link href="css/style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+/* 全局样式重置和基础设置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  width: 90%;
+  margin: 0 auto; /* 页面居中 */
+  padding: 20px 0;
+}
+
+.main h1 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* 核心：每位讲者的容器，使用Flex布局实现并排 */
+.speaker-item {
+  display: flex; /* 开启Flex布局，子元素并排 */
+  align-items: flex-start; /* 顶部对齐 */
+  gap: 20px; /* 图片和文字之间的间距 */
+  margin-bottom: 40px; /* 讲者之间的间距 */
+  text-decoration: none; /* 去除链接下划线 */
+  color: #333; /* 文字颜色 */
+}
+
+/* 图片样式 */
+.speaker-item img {
+  width: 230px;
+  height: 280px;
+  object-fit: cover; /* 保持图片比例，避免拉伸变形 */
+  border-radius: 4px; /* 轻微圆角，更美观 */
+}
+
+/* 文字区域样式 */
+.speaker-text {
+  flex: 1; /* 文字区域占剩余宽度 */
+}
+
+.speaker-text p:first-child {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.speaker-text p:last-child {
+  line-height: 1.6;
+  font-size: 16px;
+  color: #444;
+}
+</style>
 </head>
 
 <body>
 <div class="page">
-    <div class="content">
-      <div class="main">
-       	  <h1>Keynotes</h1>
-		  
+  <div class="content">
+    <div class="main">
+      <h1>Keynotes</h1>
 
-		   <a href="https://people.ucas.edu.cn/~0017958" target="_blank">
-          <p>
-            <strong>Prof.Fenghua Li</strong>
-          </p>
-          <img src="img/lfh.jpg" alt="" width="230" height="280"/>
-          <p>
-			 Li Fenghua is an esteemed professor at the Institute of Information Engineering, Chinese Academy of Sciences.
-          </p>  
-		   </a>
-
-		  <a href="https://faculty.uestc.edu.cn/zhangxiaosong/zh_CN/index.htm" target="_blank">
-          <p>
-            <strong>Prof.Xiaosong Zhang</strong>
-          </p>
-       
-			 <img src="img/zxs.jpg" alt="" width="230" height="280"/> 
-		  
-          <p>
-			Zhang Xiaosong is professor and the Dean of the School of Information and Software Engineering (Demonstration Software School) as well as the School of Cyberspace Security at the University of Electronic Science and Technology of China.
-          </p>  
-		  </a>
-
-
-		    <a href="https://faculty.ustc.edu.cn/yunenghai/zh_CN/index.htm" target="_blank">
-		  <p>
-            <strong>Prof.Nenghai Yu</strong>
-          </p>
-          <img src="img/ynh.png" alt="" width="230" height="280"/>
-          <p>
-			 Yu Nenghai, Professor of the Chair，School of Cyberspace Security, University of Science and Technology of China.
-          </p>  
-		  </a>
-
-
-		  <a href="https://person.zju.edu.cn/wyxu" target="_blank">
-		  <p>
-            <strong>Prof.Wenyuan Xu</strong>
-          </p>
-          <img src="img/xwy.png" alt="" width="230" height="280"/>
-          <p>
-			Xu Wenyuan, professor, College of Electrical Engineering, Zhejiang University.
-          </p>  
-		  </a>
-
-
-		  <a href="https://homepage.hit.edu.cn/liaoqing" target="_blank">
-		  <p>
-            <strong>Prof.Qing Liao</strong>
-          </p>
-          <img src="img/lq.png" alt="" width="230" height="280"/>
-          <p>
-		   Liao Qing, professor, Dean of the Cyberspace Security Research Institute, Harbin Institute of Technology (Shenzhen).
-          </p>  
-		  </a>
-
-		  
-
-<a href="https://jszy.whu.edu.cn/hedebiao/zh_CN/index.htm" target="_blank">
-		  <p>
-            <strong>Prof.Debiao He</strong>
-          </p>
-          <img src="img/hdb.png" alt="" width="230" height="280"/>
-          <p>
-			 He Debiao is a professor and the Dean of the School of Computer Science at Wuhan University.
-          </p>  
-	 </a>
-
-     <a href="http://faculty.hust.edu.cn/zoudeqing/zh_CN/index.htm" target="_blank">
-		  <p>
-            <strong>Prof.Deqing Zou</strong>
-          </p>
-          <img src="img/zdq.jpg" alt="" width="230" height="280"/>
-          <p>
-		  Zou Deqing is a professor and the Executive Dean of the School of Cyberspace Security at Huazhong University of Science and Technology.
-          </p>
-	 </a>
-
-		  <a href="https://cst.buaa.edu.cn/info/1111/3785.htm" target="_blank">
-		  <p>
-            <strong>Prof.Hongbin Luo</strong>
-          </p>
-          <img src="img/lhb.jpg" alt="" width="230" height="280"/>
-          <p>
-			 Luo Hongbin is a professor and the Dean of the School of Cybersecurity at Beihang University.
-          </p>  
-		  </a>
-
-		  <a href="https://fds.cityu.edu.mo/members/336" target="_blank">
-		  <p>
-            <strong>Prof.Tianqing Zhu</strong>
-          </p>
-          <img src="img/ztq.png" alt="" width="230" height="280"/>
-          <p>
-			Zhu Tianqing, professor and doctoral supervisor, currently serves as the Vice Dean (Research) of the School of Data Science at the City University of Macau.
-          </p>  
-		  </a>
-		  
-       
-
-
-
-
-		  
-          </p>	  
+      <!-- 每位讲者包裹在speaker-item容器中 -->
+      <a href="https://people.ucas.edu.cn/~0017958" target="_blank" class="speaker-item">
+        <img src="img/lfh.jpg" alt="Prof.Fenghua Li" width="230" height="280"/>
+        <div class="speaker-text">
+          <p>Prof.Fenghua Li</p>
+          <p>Li Fenghua is an esteemed professor at the Institute of Information Engineering, Chinese Academy of Sciences.</p>
         </div>
+      </a>
+
+      <a href="https://faculty.uestc.edu.cn/zhangxiaosong/zh_CN/index.htm" target="_blank" class="speaker-item">
+        <img src="img/zxs.jpg" alt="Prof.Xiaosong Zhang" width="230" height="280"/>
+        <div class="speaker-text">
+          <p>Prof.Xiaosong Zhang</p>
+          <p>Zhang Xiaosong is professor and the Dean of the School of Information and Software Engineering (Demonstration Software School) as well as the School of Cyberspace Security at the University of Electronic Science and Technology of China.</p>
+        </div>
+      </a>
+
+      <a href="https://faculty.ustc.edu.cn/yunenghai/zh_CN/index.htm" target="_blank" class="speaker-item">
+        <img src="img/ynh.png" alt="Prof.Nenghai Yu" width="230" height="280"/>
+        <div class="speaker-text">
+          <p>Prof.Nenghai Yu</p>
+          <p>Yu Nenghai, Professor of the Chair，School of Cyberspace Security, University of Science and Technology of China.</p>
+        </div>
+      </a>
+
+      <a href="https://person.zju.edu.cn/wyxu" target="_blank" class="speaker-item">
+        <img src="img/xwy.png" alt="Prof.Wenyuan Xu" width="230" height="280"/>
+        <div class="speaker-text">
+          <p>Prof.Wenyuan Xu</p>
+          <p>Xu Wenyuan, professor, College of Electrical Engineering, Zhejiang University.</p>
+        </div>
+      </a>
+
+      <a href="https://homepage.hit.edu.cn/liaoqing" target="_blank" class="speaker-item">
+        <img src="img/lq.png" alt="Prof.Qing Liao" width="230" height="280"/>
+        <div class="speaker-text">
+          <p>Prof.Qing Liao</p>
+          <p>Liao Qing, professor, Dean of the Cyberspace Security Research Institute, Harbin Institute of Technology (Shenzhen).</p>
+        </div>
+      </a>
+
+      <a href="https://jszy.whu.edu.cn/hedebiao/zh_CN/index.htm" target="_blank" class="speaker-item">
+        <img src="img/hdb.png" alt="Prof.Debiao He" width="230" height="280"/>
+        <div class="speaker-text">
+          <p>Prof.Debiao He</p>
+          <p>He Debiao is a professor and the Dean of the School of Computer Science at Wuhan University.</p>
+        </div>
+      </a>
+
+      <a href="http://faculty.hust.edu.cn/zoudeqing/zh_CN/index.htm" target="_blank" class="speaker-item">
+        <img src="img/zdq.jpg" alt="Prof.Deqing Zou" width="230" height="280"/>
+        <div class="speaker-text">
+          <p>Prof.Deqing Zou</p>
+          <p>Zou Deqing is a professor and the Executive Dean of the School of Cyberspace Security at Huazhong University of Science and Technology.</p>
+        </div>
+      </a>
+
+      <a href="https://cst.buaa.edu.cn/info/1111/3785.htm" target="_blank" class="speaker-item">
+        <img src="img/lhb.jpg" alt="Prof.Hongbin Luo" width="230" height="280"/>
+        <div class="speaker-text">
+          <p>Prof.Hongbin Luo</p>
+          <p>Luo Hongbin is a professor and the Dean of the School of Cybersecurity at Beihang University.</p>
+        </div>
+      </a>
+
+      <a href="https://fds.cityu.edu.mo/members/336" target="_blank" class="speaker-item">
+        <img src="img/ztq.png" alt="Prof.Tianqing Zhu" width="230" height="280"/>
+        <div class="speaker-text">
+          <p>Prof.Tianqing Zhu</p>
+          <p>Zhu Tianqing, professor and doctoral supervisor, currently serves as the Vice Dean (Research) of the School of Data Science at the City University of Macau.</p>
+        </div>
+      </a>
     </div>
+  </div>
 </div>
 </body>
 </html>
