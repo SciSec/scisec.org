@@ -4,36 +4,41 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>keynotes_SciSec2026</title>
 <style type="text/css">
-/* 全局样式重置和基础设置 */
+/* 全局样式重置，彻底清除浏览器默认边距 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 【核心修复】清除浏览器默认给 body 留下的外边距 */
+/* 强制清除body默认边距，确保页面与浏览器无缝对接 */
 body {
-  margin: 0; /* 强制清零，确保页面与浏览器边缘无缝对接 */
-  background-color: #fff; /* 确保背景色统一 */
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
 }
 
-/* 页面容器：滚动条紧贴右侧 */
+/* 页面容器：核心修复，滚动条贴最右，不挡字 */
 .page {
   width: 90%;
-  margin: 0 auto; /* 页面居中 */
+  margin: 0 auto;
   max-height: 90vh;
-  overflow-y: scroll; /* 永远显示滚动条 */
+  overflow-y: scroll; /* 永久显示垂直滚动条 */
   
-  /* 关键：让滚动条贴在容器最右侧，不留空隙 */
+  /* 关键1：只给上下内边距，左右为0，滚动条贴容器最右 */
   padding: 20px 0 20px 0;
+  
+  /* 关键2：给容器加右侧内边距，专门给滚动条腾位置，彻底不挡字 */
+  padding-right: 12px;
 }
 
-/* 美化滚动条（Chrome/Edge/Safari） */
+/* 美化滚动条（Chrome/Edge/Safari），宽度8px，完全不挡字 */
 .page::-webkit-scrollbar {
   width: 8px;
 }
 .page::-webkit-scrollbar-track {
   background: #f1f1f1;
+  border-radius: 4px;
 }
 .page::-webkit-scrollbar-thumb {
   background: #999;
@@ -43,14 +48,21 @@ body {
   background: #666;
 }
 
+/* 兼容Firefox的滚动条样式 */
+.page {
+  scrollbar-width: thin;
+  scrollbar-color: #999 #f1f1f1;
+}
+
 .main h1 {
   margin-bottom: 30px;
   font-size: 28px;
   color: #333;
-  padding: 0 10px;
+  /* 给内容加左侧内边距，和官网对齐，不贴滚动条 */
+  padding: 0 10px 0 10px;
 }
 
-/* 讲者卡片：左右布局 */
+/* 讲者卡片：左右布局，内容不贴滚动条 */
 .speaker-item {
   display: flex;
   align-items: flex-start;
@@ -58,10 +70,11 @@ body {
   margin-bottom: 40px;
   text-decoration: none;
   color: #333;
-  padding: 0 10px;
+  /* 内容左侧留空，右侧不贴滚动条 */
+  padding: 0 10px 0 10px;
 }
 
-/* 图片 */
+/* 图片样式 */
 .speaker-item img {
   width: 230px;
   height: 280px;
@@ -103,7 +116,7 @@ body {
         </div>
       </a>
 
-      <a href="https://baike.baidu.com/item/%E8%B4%DA%E7%84%B0/55937559" target="_blank" class="speaker-item">
+      <a href="https://baike.baidu.com/item/%E8%B4%BE%E7%84%B0/55937559" target="_blank" class="speaker-item">
         <img src="img/jy.png" alt="Yan Jia" width="230" height="280"/>
         <div class="speaker-text">
           <p>Yan Jia</p>
