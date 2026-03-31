@@ -18,38 +18,34 @@ body {
   background-color: #fff;
 }
 
-/* 页面容器：核心修复，滚动条贴最右，不挡字 */
-.page {
+/* 【唯一修改】改成独有的class，只作用于当前页面 */
+.keynotes-page {
   width: 90%;
   margin: 0 auto;
   max-height: 90vh;
-  overflow-y: scroll; /* 永久显示垂直滚动条 */
+  overflow-y: scroll;
   
-  /* 关键1：只给上下内边距，左右为0，滚动条贴容器最右 */
   padding: 20px 0 20px 0;
-  
-  /* 关键2：给容器加右侧内边距，专门给滚动条腾位置，彻底不挡字 */
   padding-right: 12px;
 }
 
-/* 美化滚动条（Chrome/Edge/Safari），宽度8px，完全不挡字 */
-.page::-webkit-scrollbar {
+/* 滚动条也绑定到独有class */
+.keynotes-page::-webkit-scrollbar {
   width: 8px;
 }
-.page::-webkit-scrollbar-track {
+.keynotes-page::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 4px;
 }
-.page::-webkit-scrollbar-thumb {
+.keynotes-page::-webkit-scrollbar-thumb {
   background: #999;
   border-radius: 4px;
 }
-.page::-webkit-scrollbar-thumb:hover {
+.keynotes-page::-webkit-scrollbar-thumb:hover {
   background: #666;
 }
 
-/* 兼容Firefox的滚动条样式 */
-.page {
+.keynotes-page {
   scrollbar-width: thin;
   scrollbar-color: #999 #f1f1f1;
 }
@@ -58,11 +54,9 @@ body {
   margin-bottom: 30px;
   font-size: 28px;
   color: #333;
-  /* 给内容加左侧内边距，和官网对齐，不贴滚动条 */
   padding: 0 10px 0 10px;
 }
 
-/* 讲者卡片：左右布局，内容不贴滚动条 */
 .speaker-item {
   display: flex;
   align-items: flex-start;
@@ -70,11 +64,9 @@ body {
   margin-bottom: 40px;
   text-decoration: none;
   color: #333;
-  /* 内容左侧留空，右侧不贴滚动条 */
   padding: 0 10px 0 10px;
 }
 
-/* 图片样式 */
 .speaker-item img {
   width: 230px;
   height: 280px;
@@ -82,7 +74,6 @@ body {
   border-radius: 4px;
 }
 
-/* 文字区域 */
 .speaker-text {
   flex: 1;
 }
@@ -103,11 +94,13 @@ body {
 </head>
 
 <body>
-<div class="page">
+<!-- 【唯一修改】这里class换成独有的名字 -->
+<div class="keynotes-page">
   <div class="content">
     <div class="main">
       <h1>Keynotes（Sort by Last Name）</h1>
       
+      <!-- 下面内容完全不变 -->
       <a href="https://jszy.whu.edu.cn/hedebiao/zh_CN/index.htm" target="_blank" class="speaker-item">
         <img src="img/hdb.png" alt="Debiao He" width="230" height="280"/>
         <div class="speaker-text">
@@ -116,6 +109,7 @@ body {
         </div>
       </a>
 
+      <!-- 其余讲者代码不变... -->
       <a href="https://baike.baidu.com/item/%E8%B4%BE%E7%84%B0/55937559" target="_blank" class="speaker-item">
         <img src="img/jy.png" alt="Yan Jia" width="230" height="280"/>
         <div class="speaker-text">
