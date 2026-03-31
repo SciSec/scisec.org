@@ -11,26 +11,23 @@
   box-sizing: border-box;
 }
 
-/* 给页面主体设置固定高度 + 强制显示垂直滚动条 */
+/* 页面容器：滚动条紧贴右侧 */
 .page {
   width: 90%;
-  margin: 0 auto; /* 页面居中 */
-  padding: 20px 30px 20px 0;
-  /* 核心：限制高度 + 始终显示垂直滚动条 */
+  margin: 0 auto;
   max-height: 90vh;
-  overflow-y: scroll;
-  /* 美化滚动条（兼容Chrome/Edge/Safari） */
-  scrollbar-width: thin;
-  scrollbar-color: #999 #f1f1f1;
+  overflow-y: scroll; /* 永远显示滚动条 */
+  
+  /* 关键：让滚动条贴在容器最右侧，不留空隙 */
+  padding: 20px 0 20px 0;
 }
 
-/* 自定义滚动条样式（更美观） */
+/* 美化滚动条（Chrome/Edge/Safari） */
 .page::-webkit-scrollbar {
   width: 8px;
 }
 .page::-webkit-scrollbar-track {
   background: #f1f1f1;
-  border-radius: 4px;
 }
 .page::-webkit-scrollbar-thumb {
   background: #999;
@@ -44,29 +41,31 @@
   margin-bottom: 30px;
   font-size: 28px;
   color: #333;
+  padding: 0 10px;
 }
 
-/* 核心：每位讲者的容器，使用Flex布局实现并排 */
+/* 讲者卡片：左右布局 */
 .speaker-item {
-  display: flex; /* 开启Flex布局，子元素并排 */
-  align-items: flex-start; /* 顶部对齐 */
-  gap: 20px; /* 图片和文字之间的间距 */
-  margin-bottom: 40px; /* 讲者之间的间距 */
-  text-decoration: none; /* 去除链接下划线 */
-  color: #333; /* 文字颜色 */
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 40px;
+  text-decoration: none;
+  color: #333;
+  padding: 0 10px;
 }
 
-/* 图片样式 */
+/* 图片 */
 .speaker-item img {
   width: 230px;
   height: 280px;
-  object-fit: cover; /* 保持图片比例，避免拉伸变形 */
-  border-radius: 4px; /* 轻微圆角，更美观 */
+  object-fit: cover;
+  border-radius: 4px;
 }
 
-/* 文字区域样式 */
+/* 文字区域 */
 .speaker-text {
-  flex: 1; /* 文字区域占剩余宽度 */
+  flex: 1;
 }
 
 .speaker-text p:first-child {
