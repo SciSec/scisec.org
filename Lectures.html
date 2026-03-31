@@ -4,57 +4,51 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>keynotes_SciSec2026</title>
 <style type="text/css">
-/* 全局样式重置，彻底清除浏览器默认边距 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* 强制清除body默认边距，确保页面与浏览器无缝对接 */
 body {
   margin: 0;
   padding: 0;
   background-color: #fff;
 }
 
-/* 【唯一修改】改成独有的class，只作用于当前页面 */
-.keynotes-page {
-  width: 90%;
-  margin: 0 auto;
-  max-height: 90vh;
-  overflow-y: scroll;
-  
-  padding: 20px 0 20px 0;
-  padding-right: 12px;
+/* ========== 核心：只对当前页面生效，加了 !important 强制优先 ========== */
+div[title="keynotes-container"] {
+  width: 90% !important;
+  margin: 0 auto !important;
+  max-height: 90vh !important;
+  overflow-y: scroll !important;
+  padding: 20px 0 !important;
+  padding-right: 12px !important;
 }
 
-/* 滚动条也绑定到独有class */
-.keynotes-page::-webkit-scrollbar {
-  width: 8px;
+div[title="keynotes-container"]::-webkit-scrollbar {
+  width: 8px !important;
 }
-.keynotes-page::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
+div[title="keynotes-container"]::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+  border-radius: 4px !important;
 }
-.keynotes-page::-webkit-scrollbar-thumb {
-  background: #999;
-  border-radius: 4px;
+div[title="keynotes-container"]::-webkit-scrollbar-thumb {
+  background: #999 !important;
+  border-radius: 4px !important;
 }
-.keynotes-page::-webkit-scrollbar-thumb:hover {
-  background: #666;
+div[title="keynotes-container"]::-webkit-scrollbar-thumb:hover {
+  background: #666 !important;
 }
-
-.keynotes-page {
-  scrollbar-width: thin;
-  scrollbar-color: #999 #f1f1f1;
+div[title="keynotes-container"] {
+  scrollbar-width: thin !important;
+  scrollbar-color: #999 #f1f1f1 !important;
 }
 
 .main h1 {
   margin-bottom: 30px;
   font-size: 28px;
   color: #333;
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
 }
 
 .speaker-item {
@@ -64,7 +58,7 @@ body {
   margin-bottom: 40px;
   text-decoration: none;
   color: #333;
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
 }
 
 .speaker-item img {
@@ -94,13 +88,12 @@ body {
 </head>
 
 <body>
-<!-- 【唯一修改】这里class换成独有的名字 -->
-<div class="keynotes-page">
+<!-- ========== 关键：用独一无二的 title 属性，别的页面不可能有 ========== -->
+<div title="keynotes-container">
   <div class="content">
     <div class="main">
       <h1>Keynotes（Sort by Last Name）</h1>
       
-      <!-- 下面内容完全不变 -->
       <a href="https://jszy.whu.edu.cn/hedebiao/zh_CN/index.htm" target="_blank" class="speaker-item">
         <img src="img/hdb.png" alt="Debiao He" width="230" height="280"/>
         <div class="speaker-text">
@@ -109,7 +102,6 @@ body {
         </div>
       </a>
 
-      <!-- 其余讲者代码不变... -->
       <a href="https://baike.baidu.com/item/%E8%B4%BE%E7%84%B0/55937559" target="_blank" class="speaker-item">
         <img src="img/jy.png" alt="Yan Jia" width="230" height="280"/>
         <div class="speaker-text">
