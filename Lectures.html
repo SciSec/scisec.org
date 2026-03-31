@@ -11,10 +11,16 @@
   box-sizing: border-box;
 }
 
+/* 【核心修复】清除浏览器默认给 body 留下的外边距 */
+body {
+  margin: 0; /* 强制清零，确保页面与浏览器边缘无缝对接 */
+  background-color: #fff; /* 确保背景色统一 */
+}
+
 /* 页面容器：滚动条紧贴右侧 */
 .page {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto; /* 页面居中 */
   max-height: 90vh;
   overflow-y: scroll; /* 永远显示滚动条 */
   
@@ -97,7 +103,7 @@
         </div>
       </a>
 
-      <a href="https://baike.baidu.com/item/%E8%B4%BE%E7%84%B0/55937559" target="_blank" class="speaker-item">
+      <a href="https://baike.baidu.com/item/%E8%B4%DA%E7%84%B0/55937559" target="_blank" class="speaker-item">
         <img src="img/jy.png" alt="Yan Jia" width="230" height="280"/>
         <div class="speaker-text">
           <p>Yan Jia</p>
