@@ -11,10 +11,33 @@
   box-sizing: border-box;
 }
 
+/* 给页面主体设置固定高度 + 强制显示垂直滚动条 */
 .page {
   width: 90%;
   margin: 0 auto; /* 页面居中 */
   padding: 20px 0;
+  /* 核心：限制高度 + 始终显示垂直滚动条 */
+  max-height: 90vh;
+  overflow-y: scroll;
+  /* 美化滚动条（兼容Chrome/Edge/Safari） */
+  scrollbar-width: thin;
+  scrollbar-color: #999 #f1f1f1;
+}
+
+/* 自定义滚动条样式（更美观） */
+.page::-webkit-scrollbar {
+  width: 8px;
+}
+.page::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+.page::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 4px;
+}
+.page::-webkit-scrollbar-thumb:hover {
+  background: #666;
 }
 
 .main h1 {
@@ -75,8 +98,7 @@
         </div>
       </a>
 
-
-                  <a href="https://baike.baidu.com/item/%E8%B4%BE%E7%84%B0/55937559" target="_blank" class="speaker-item">
+      <a href="https://baike.baidu.com/item/%E8%B4%BE%E7%84%B0/55937559" target="_blank" class="speaker-item">
         <img src="img/jy.png" alt="Yan Jia" width="230" height="280"/>
         <div class="speaker-text">
           <p>Yan Jia</p>
@@ -84,7 +106,6 @@
         </div>
       </a>
       
-
       <a href="https://people.ucas.edu.cn/~0017958" target="_blank" class="speaker-item">
         <img src="img/lfh.jpg" alt="Fenghua Li" width="230" height="280"/>
         <div class="speaker-text">
@@ -93,15 +114,13 @@
         </div>
       </a>
 
-
-       <a href="https://homepage.hit.edu.cn/liaoqing" target="_blank" class="speaker-item">
+      <a href="https://homepage.hit.edu.cn/liaoqing" target="_blank" class="speaker-item">
         <img src="img/lq.png" alt="Qing Liao" width="230" height="280"/>
         <div class="speaker-text">
           <p>Qing Liao</p>
           <p>Professor<br>Dean of the Cyberspace Security Research Institute<br>Harbin Institute of Technology (Shenzhen)</p>
         </div>
       </a>
-
       
       <a href="https://cst.buaa.edu.cn/info/1111/3785.htm" target="_blank" class="speaker-item">
         <img src="img/lhb.jpg" alt="Hongbin Luo" width="230" height="280"/>
@@ -111,8 +130,6 @@
         </div>
       </a>
 
-
-
       <a href="https://person.zju.edu.cn/wyxu" target="_blank" class="speaker-item">
         <img src="img/xwy.png" alt="Wenyuan Xu" width="230" height="280"/>
         <div class="speaker-text">
@@ -121,7 +138,7 @@
         </div>
       </a>
 
-            <a href="https://faculty.ustc.edu.cn/yunenghai/zh_CN/index.htm" target="_blank" class="speaker-item">
+      <a href="https://faculty.ustc.edu.cn/yunenghai/zh_CN/index.htm" target="_blank" class="speaker-item">
         <img src="img/ynh.png" alt="Nenghai Yu" width="230" height="280"/>
         <div class="speaker-text">
           <p>Nenghai Yu</p>
@@ -129,16 +146,13 @@
         </div>
       </a>
 
-
-
-            <a href="https://faculty.uestc.edu.cn/zhangxiaosong/zh_CN/index.htm" target="_blank" class="speaker-item">
+      <a href="https://faculty.uestc.edu.cn/zhangxiaosong/zh_CN/index.htm" target="_blank" class="speaker-item">
         <img src="img/zxs.jpg" alt="Xiaosong Zhang" width="230" height="280"/>
         <div class="speaker-text">
           <p>Xiaosong Zhang</p>
           <p>Professor<br>Dean of the School of Cyberspace Security<br>University Of Electronic Science And Technology Of China</p>
         </div>
       </a>
-
       
       <a href="https://fds.cityu.edu.mo/members/336" target="_blank" class="speaker-item">
         <img src="img/ztq.png" alt="Tianqing Zhu" width="230" height="280"/>
@@ -148,22 +162,13 @@
         </div>
       </a>
 
-
-
-            <a href="http://faculty.hust.edu.cn/zoudeqing/zh_CN/index.htm" target="_blank" class="speaker-item">
+      <a href="http://faculty.hust.edu.cn/zoudeqing/zh_CN/index.htm" target="_blank" class="speaker-item">
         <img src="img/zdq.jpg" alt="Deqing Zou" width="230" height="280"/>
         <div class="speaker-text">
           <p>Deqing Zou</p>
           <p>Professor<br>Dean of the School of Cyberspace Security<br>Huazhong University of Science and Technology</p>
         </div>
       </a>
-
-
-
-
-
-      
-
     </div>
   </div>
 </div>
