@@ -22,6 +22,24 @@
   td:first-child {
     text-align: left;
   }
+
+  /* 新增：下载按钮样式 */
+  .download-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #2c66b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    transition: background 0.3s;
+  }
+  .download-btn:hover {
+    background-color: #1a4a8c;
+    color: white;
+  }
 </style>
 </head>
 
@@ -31,6 +49,14 @@
       <div class="main">
           <h1>Registration</h1>
           <p>The 8th International Conference on Science of Cyber Security (SciSec 2026) will be held in the Beijing Institute of Technology International Exchange Center, from May 29 to May 31, 2026. Anyone related to the area of cybersecurity are encouraged to register for the conference as soon as possible. Note that for each accepted paper, at least one author should register before May 15, 2026.</p>
+
+          <!-- ===================== 新增：会议通知下载 ===================== -->
+          <h2>Conference Notification</h2>
+          <p>You can download the official conference notification PDF here:</p>
+          <a href="SciSec 2026_conference_notification.pdf" class="download-btn" download>
+            Download SciSec 2026 Conference Notification (PDF)
+          </a>
+          <!-- ============================================================ -->
 
           <h2>Registration Fee</h2>
           <table>
@@ -53,6 +79,7 @@
                   <strong>Listeners (Non-paper Registration)</strong><br>
                   <small><em>* For attendees without paper presentations.</em></small>
                 </td>
+              </td>
                 <td>1500 RMB / Person</td>
               </tr>
             </tbody>
@@ -60,7 +87,7 @@
 
           <h2>Registration Methods</h2>
           <ul>
-        To Be Announced
+            To Be Announced
           </ul>
 
           <h2>Registration Notes</h2>
