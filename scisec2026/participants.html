@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Special Guests</title>
+<style>
+/* 全局容器：4列网格，列宽均分 */
+.guests-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 单个嘉宾卡片：内部拆成3个固定区域（图片/名字），强制对齐顶部 */
+.guest-card {
+  display: grid;
+  /* 明确划分3行：图片行（固定高度）、名字行（固定高度）、介绍行（自动） */
+  grid-template-rows: 150px 40px auto;
+  gap: 10px; /* 区域之间的间距固定 */
+}
+
+/* 图片：占满图片行，尺寸统一 */
+.guest-card img {
+  width: 120px;
+  height: 100%; /* 撑满图片行的150px高度 */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* 名字：占满名字行，强制顶部对齐（不管名字长短） */
+.guest-card .name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  /* 名字在固定行内垂直居中，保证所有名字的“第一行”在同一水平线 */
+  display: flex;
+  align-items: center;
+}
+
+/* 介绍：占满介绍行，强制顶部对齐 */
+.guest-card .intro {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+<h1>Special Guests（Sort by Last Name）</h1>
+
+<!-- 所有嘉宾卡片都放在同一个容器内 -->
+<div class="guests-container">
+
+
+
+  <div class="guest-card">
+    <img src="img/fzj.png" alt="Zhangjie Fu">
+    <div class="name">Zhangjie Fu</div>
+    <p class="intro">Professor, School of Cyberspace Security, Nanjing University of Information Science and Technology</p>
+  </div>
+
+  <div class="guest-card">
+    <img src="img/hdb.png" alt="Debiao He">
+    <div class="name">Debiao He</div>
+    <p class="intro">Professor, School of Computer Science, Wuhan University</p>
+  </div>
+
+  <div class="guest-card">
+    <img src="img/hxy.jpg" alt="Xinyi Huang">
+    <div class="name">Xinyi Huang</div>
+    <p class="intro">Professor, Nanjing University of Aeronautics and Astronautics</p>
+  </div>
+
+  <div class="guest-card">
+    <img src="img/jy.png" alt="Yan Jia">
+    <div class="name">Yan Jia</div>
+    <p class="intro">Professor, School of Computer Science，National University of Defense Technology</p>
+  </div>
+
+  
+  <div class="guest-card">
+    <img src="img/lfh.jpg" alt="Fenghua Li">
+    <div class="name">Fenghua Li</div>
+    <p class="intro">Professor, Institute of Information Engineering, Chinese Academy of Sciences</p>
+  </div>
+
+  <!-- <div class="guest-card">
+    <img src="img/lq.png" alt="Qing Liao">
+    <div class="name">Qing Liao</div>
+    <p class="intro">Professor, Cyberspace Security Research Institute, Harbin Institute of Technology (Shenzhen)</p>
+  </div> -->
+
+  <div class="guest-card">
+    <img src="img/lq2.png" alt="Qi Li">
+    <div class="name">Qi Li</div>
+    <p class="intro">Professor, Institute for Network Sciences and Cyberspace, Tsinghua University</p>
+  </div>
+  
+  <div class="guest-card">
+    <img src="img/lf.jpg" alt="Feng Liu">
+    <div class="name">Feng Liu</div>
+    <p class="intro">Professor, Institute of Information Engineering, Chinese Academy of Sciences</p>
+  </div>
+
+
+  
+  <div class="guest-card">
+    <img src="img/ljw.png" alt="Jianwei Liu">
+    <div class="name">Jianwei Liu</div>
+    <p class="intro">Professor, School of Cybersecurity, Beihang University</p>
+  </div>
+
+
+
+  <div class="guest-card">
+    <img src="img/sj.png" alt="Jian Shen">
+    <div class="name">Jian Shen</div>
+    <p class="intro">Professor, School of Information Science and Engineering, Zhejiang Sci-Tech University</p>
+  </div>
+
+  <div class="guest-card">
+    <img src="img/tl.png" alt="Lin Tian">
+    <div class="name">Lin Tian</div>
+    <p class="intro">Professor, Institute of Computing Technology, Chinese Academy of Sciences</p>
+  </div>
+  
+  <div class="guest-card">
+    <img src="img/tyl.png" alt="Youliang Tian">
+    <div class="name">Youliang Tian</div>
+    <p class="intro">Professor, School of Big Data and Information Engineering, Guizhou University</p>
+  </div>
+
+  <!-- <div class="guest-card">
+    <img src="img/xwy.png" alt="Wenyuan Xu">
+    <div class="name">Wenyuan Xu</div>
+    <p class="intro">Professor, College of Electrical Engineering, Zhejiang University</p>
+  </div> -->
+
+  <div class="guest-card">
+    <img src="img/ynh.png" alt="Nenghai Yu">
+    <div class="name">Nenghai Yu</div>
+    <p class="intro">Chair Professor, School of Cyberspace Security, University of Science and Technology of China</p>
+  </div>
+
+
+  <div class="guest-card">
+    <img src="img/zj.png" alt="Jiang Zhang">
+    <div class="name">Jiang Zhang</div>
+    <p class="intro">Professor, State Key Laboratory of Cryptology</p>
+  </div>
+
+
+
+
+  
+  <div class="guest-card">
+    <img src="img/zxs.jpg" alt="Xiaosong Zhang">
+    <div class="name">Xiaosong Zhang</div>
+    <p class="intro">Professor, School of Cyberspace Security, University of Electronic Science and Technology of China</p>
+  </div>
+  
+ <div class="guest-card">
+    <img src="img/zlh.jpg" alt="Liehuang Zhu">
+    <div class="name">Liehuang Zhu</div>
+    <p class="intro">Professor, School of Cyber space Science and Technology, Beijing Institute of Technology</p>
+  </div>
+
+  <div class="guest-card">
+    <img src="img/ztq.png" alt="Tianqing Zhu">
+    <div class="name">Tianqing Zhu</div>
+    <p class="intro">Professor, School of Data Science, City University of Macau</p>
+  </div>
+
+  
+  <div class="guest-card">
+    <img src="img/zdq.jpg" alt="Deqing Zou">
+    <div class="name">Deqing Zou</div>
+    <p class="intro">Professor, School of Cyberspace Security, Huazhong University of Science and Technology</p>
+  </div>
+
+
+
+  
+  
+</div>
+</body>
+</html>
